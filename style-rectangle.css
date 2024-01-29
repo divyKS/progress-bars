@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 20px;
+    width: 100px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.progress{
+    height: 16px;
+    /* width: 96px; */
+    background: lightblue;
+    animation: progressBar 8s linear forwards;
+}
+
+@keyframes progressBar {
+    0%{
+        width: 0px;
+        background-color: red;
+        /* transform: translateX(0px); */
+    }
+    100%{
+        width: 96px;
+        background-color: green;
+        /* transform: translateX(96px); */
+    }
+}

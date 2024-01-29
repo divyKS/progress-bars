@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.circular-container {
+    height: 100px;
+    width: 100px;
+    background: white;
+    position: relative;
+}
+
+.positionReference {
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.inner {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80px;
+    width: 80px;
+    background: white;
+    border-radius: 100%;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar-left {
+    position: absolute;
+    background: blue;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    animation: left 4s linear both;
+    z-index: 3;
+}
+
+.hider-left {
+    position: absolute;
+    background: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    z-index: 4;
+}
+
+.bar-right {
+    position: absolute;
+    background: blue;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+    animation: right 4s linear 4s both;
+    z-index: 1;
+}
+
+.hider-right {
+    position: absolute;
+    background: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0px, 100px, 100px, 50px);
+    z-index: 2;
+}
+
+@keyframes left {
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes right {
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes hiderRemove {
+}
